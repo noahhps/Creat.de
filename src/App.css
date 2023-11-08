@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+html {
+  font-family: Inter,Open Sans,Arial,sans-serif;
+  overflow: 'hidden';
+  font-weight: 600px;
+  background-repeat: no-repeat;  
+  
+}
+body > #root{
+  height: 100vh;
+}
+
+#root {
+  background-image: url('../src/assets/bbblurry.svg');
+  overflow: hidden;
+  background-color: rgb(248, 248, 248);
+  opacity: 0.8;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
