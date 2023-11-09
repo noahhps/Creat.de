@@ -1,8 +1,12 @@
 import {useState } from 'react';
 import pb from '../lib/pocketbase.js';
 import './styles/Post.css';
+import { catchError } from 'solid-js';
+//import ReturnToHome from '../hooks/RenderHome.jsx';
+//import Home from './Home'
 //import App from '../App.jsx'
 //import BackButton from './BackButton.jsx';
+
 
 export default function PostText() {
 
@@ -27,7 +31,9 @@ export default function PostText() {
       "Post_Text": textAreaText,
       "Date": new Date()
     };
+    catchError(alert('You should add a title or some text ;)'))
     await pb.collection('posts').create(data);
+    
   };
 
 
@@ -44,7 +50,8 @@ export default function PostText() {
       wrap='off'
       ></textarea>
       <textarea id='PostTextArea' value={textAreaText} onChange={handleTextAreaChange}></textarea>
-      <button id='upload' onClick={handleUploadClick}>upload</button>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+      <button id='upload' onClick={handleUploadClick}><span className="material-symbols-outlined">add</span></button>
     </div>
     </>
   );

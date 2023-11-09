@@ -9,8 +9,8 @@ html {
 }
 body > #root{
   height: 100vh;
-  background-image: url('../src/assets/bbblurry.svg');
-  background-repeat: no-repeat;
+  background-image: url('../src/assets/nnnoise.svg');
+  
 }
 
 #root {

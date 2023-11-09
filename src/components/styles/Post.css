@@ -64,7 +64,7 @@
 #upload {
   margin-bottom: 3%;
   font-family: Inter,Open Sans,Arial,sans-serif;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.5);
   max-width: 1280px;
   text-align: center;
   margin-left: auto;
@@ -73,13 +73,9 @@
   justify-content: center;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-family: sans-serif;
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  cursor:pointer;
+  padding: 0.7% 1%;
   transition: border-color 0.25s;
 }
 
