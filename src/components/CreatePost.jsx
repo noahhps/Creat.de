@@ -1,7 +1,6 @@
 import {useState } from 'react';
 import pb from '../lib/pocketbase.js';
 import './styles/Post.css';
-import { catchError } from 'solid-js';
 //import ReturnToHome from '../hooks/RenderHome.jsx';
 //import Home from './Home'
 //import App from '../App.jsx'
@@ -31,9 +30,11 @@ export default function PostText() {
       "Post_Text": textAreaText,
       "Date": new Date()
     };
-    catchError(alert('You should add a title or some text ;)'))
+    try {
     await pb.collection('posts').create(data);
-    
+    } catch {
+      throw(alert('You should add a title or some text'))
+    }
   };
 
 
