@@ -19,16 +19,18 @@ export default function PostFunction() {
 
 
   return (
-    <div id='PostViewDiv'>
+    <>
+    
       {posts.map((posts) => (
-        <>
+      <div id='PostViewDiv' key={posts.id}>
+        
         <h3 id='PostTitle'>{posts.Post_Title}</h3>
         <p id= 'PostText'>{posts.Post_Text}</p>
-        </>
+        </div>
       ))}
       
-    </div>
-
+    
+  </>
   );
 
 }
