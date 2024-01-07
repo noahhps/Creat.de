@@ -5,6 +5,7 @@ import Home from './Home'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Post from './CreatePost'
 import UserProfile from './Account/UserProfile'
+import Shelf from './Shelf'
 import './styles/NavBar.css'
 
 export default function NavBar() {
@@ -12,7 +13,14 @@ export default function NavBar() {
       <>
       
   <Router>
-  
+  <nav id='Navigator'>
+    <ul>
+      <li id='Home'><Link to="/">🏠 Home</Link></li>
+      <li id='Post'><Link to="/NewPost">📝 write a new Post</Link></li>
+      <li id='Shelf'><Link to="/Shelf">📚 Shelf</Link></li>
+      <li id='MyProfile'><Link to="/Me">🤙 Me</Link></li>
+    </ul>
+  </nav>
   
   
   
@@ -20,16 +28,11 @@ export default function NavBar() {
   <Routes>
     <Route path='/' element={<Home />} />
     <Route path='/NewPost' element={<Post />} />
+    <Route path='/Shelf' element={<Shelf />} />
     <Route path='/Me' element={<UserProfile />}/>
   </Routes>
   
-  <nav id='Navigator'>
-    <ul>
-      <li id='Home'><Link to="/">Home</Link></li>
-      <li id='Post'><Link to="/NewPost">NewPost</Link></li>
-      <li id='MyProfile'><Link to="/Me">Me</Link></li>
-    </ul>
-  </nav>
+  
       </Router>
       
       </>

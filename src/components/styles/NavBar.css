@@ -1,49 +1,26 @@
-
 #Navigator {
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    border: 1px solid rgba(255,255,255,.17);
-    border-radius: 100vw;
-    align-items: stretch;
-    padding: 6px;
-    display: flex;
-    justify-content: center;
-    align-content: flex-start;
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: static;
-    max-width:fit-content;
-  
-  }
-  
-  li {
-    margin: 4px;
-    background-color: rgb(248, 248, 248);
-    float: left;
-    border-radius: 25px;
-  }
-  
-  li a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  li a:hover {
-    background-color: #111;
-    border-radius: 25px;
-  }
-  
-  .active {
-    background-color: rgb(171, 171, 171);
-  }
+  padding: 8px 16px;
+  font-weight: bolder;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #f1f1f1;
+  color: rgb(0, 0, 0);

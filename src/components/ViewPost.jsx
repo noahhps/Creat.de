@@ -5,10 +5,13 @@ import client from '../lib/pocketbase';
 import { useEffect } from 'react';
 //import PostText from './CreatePost';
 //import axios from 'axios';
+import pb from '../lib/pocketbase'
+import bookmark from '../hooks/bookmark';
 
 export default function PostFunction() {
   const [posts, setPosts] = useState([])
-
+  
+    
   //load data from database, and then render using useEffect on page load
   useEffect( () => {
     client
@@ -23,9 +26,10 @@ export default function PostFunction() {
     
       {posts.map((posts) => (
       <div id='PostViewDiv' key={posts.id}>
-        
+        <input id='PostBookMark'  type='checkbox' onChange={bookmark}></input>
         <h3 id='PostTitle'>{posts.Post_Title}</h3>
         <p id= 'PostText'>{posts.Post_Text}</p>
+        
         </div>
       ))}
       

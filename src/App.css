@@ -10,7 +10,7 @@ html {
 body > #root{
   height: 100vh;
   background-image: url('../src/assets/nnnoise.svg');
-  
+  background-repeat: repeat;
 }
 
 #root {
@@ -20,3 +20,6 @@ body > #root{
   margin-right: auto;
 } 
 
+#UserProfile {
+  text-align: right;
+}

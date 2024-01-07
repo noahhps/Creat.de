@@ -4,6 +4,7 @@
 }
 
 #PostViewDiv {
+    overflow: hidden;
     background-color: rgba(255, 255, 255, 0.309);
     margin-left: auto;
     margin-right: auto;
@@ -28,4 +29,8 @@
 #PostText {
     text-align: left;
     padding-left: 2%;
+}
+
+#PostBookMark {
+    float: right;
 }
