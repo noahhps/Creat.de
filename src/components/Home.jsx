@@ -1,8 +1,7 @@
 //import React from "react";
 //import { useState } from "react";
-import ViewPost from './ViewPost'
-import './styles/Home.css'
-import UserProfile from './Account/UserProfile'
+import ViewPost from '../components/ViewPost'
+import '../styles/Home.css'
 
 
 export default function Home() {  
@@ -10,7 +9,7 @@ export default function Home() {
 
 return (
       <>
-      <UserProfile/>
+      
         <ViewPost/>
         <div></div>
   

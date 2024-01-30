@@ -1,7 +1,8 @@
 :root {
   line-height: 1.5;
-  font-weight: 10;
 
+  background-image: url("/src/assets/paper_texture.jpg");
+  font-family: 'Merriweather', serif; 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: white;
