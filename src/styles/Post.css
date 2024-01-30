@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+#MakePost {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, );;
+    padding: 2rem;
+    height: fit-content;
+    width: fit-content;
+    border-style: solid;
+    border-color:#252525;
+    justify-content: left;
+    transition-property: background-color;
+    transition-duration: 0.89s;
+    transition-delay: background-color .01 ease
+}  
+
+#MakePost:hover {
+  background-color: #F4F2EF;
+  
+}
+
+
+
+#upload {
+  stroke: black;
+  stroke-width: 1px;
+  margin-bottom: 3%;
+
+  background-color: #F4F2EF;
+  width: 50px;
+  margin-left: auto;
+  max-width: 100x;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  padding: 0.7% 1%;
+  transition: border-color 0.25s;
+  transition-property: background-color;
+    transition-duration: 0.89s;
+    transition-delay: background-color .01 ease
+}
+
+
+
+#upload:hover {
+  border-color: #F44027;
+}
+#upload:focus,
+#upload:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+

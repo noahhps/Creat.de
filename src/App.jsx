@@ -1,21 +1,27 @@
-import './App.css'
-//import PostText from './Post'
-//import ViewPost from './ViewPost'
+import React, { useState } from 'react';
+import NavBar from '../src/actions/NavBar';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './App.css';
 
-import UserProfile from './components/Account/UserProfile'
-import NavBar from './components/NavBar';
-/* this file is meant to be used for routing and the universal navbar */
+const App = () => {
+  const [navVisible, setNavVisible] = useState(true);
 
+  const toggleNavVisibility = () => {
+    setNavVisible(!navVisible);
+  };
 
-function App() {
   return (
-    <>
-    <NavBar/>
-    
-    
-    
-    </>
-  );
-}
+    <Router>
+      <div>
+        <button onClick={toggleNavVisibility}>
+          {navVisible ? 'Hide Navbar' : 'Show Navbar'}
+        </button>
 
-export default App
+        {navVisible && <NavBar />}
+      </div>
+    </Router>
+  );
+};
+
+export default App;
+ 

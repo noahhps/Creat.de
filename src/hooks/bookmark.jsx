@@ -1,6 +1,7 @@
 import react from "react";
 import { useState } from "react";
 import pb from "../lib/pocketbase";
+import posts from "../components/ViewPost";
 
 export default function bookmark() {
 const[bookMarked, setBookMarked] = useState(false)
@@ -20,4 +21,5 @@ const[bookMarked, setBookMarked] = useState(false)
         throw(alert('an error has occured'))
       }
   };
+  
 }
