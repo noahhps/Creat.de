@@ -1,8 +1,11 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect, Suspense, lazy} from "react";
 import '../styles/ViewPost.css';
 import client from '../lib/pocketbase';
 //import PostText from './CreatePost';
 import pb from '../lib/pocketbase'
+
+import LoadingPage from './LoadingPage'
+
 
 
 export default function PostFunction() {
@@ -13,12 +16,13 @@ export default function PostFunction() {
   
     
   //load data from database, and then render using useEffect on page load
-  useEffect( () => {
+  useEffect(() => {
     client
       .collection("posts")
       .getFullList()
       .then((res) => setPosts(res));
   }, [])
+
 
     
     //async function record() { await pb.collection('posts').update('Book_Mark', true); }
@@ -31,6 +35,7 @@ export default function PostFunction() {
     
     
 
+    
       {posts.map((posts) => (
       <div id='PostViewDiv' key={posts.id}>
         <h3 id='PostTitle'>{posts.Post_Title}</h3>
@@ -38,8 +43,9 @@ export default function PostFunction() {
         {/*<button id='BookMark' onChange={record()}>BookMark</button>*/}
         
         
-        </div>
+      </div>
       ))}
+
       
     
   </>
